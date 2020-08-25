@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
 </head>
 
 <body>
@@ -38,16 +40,25 @@
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="roswell">
+                        <label for="date">Enter a Shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="triangle">
+                        <label for="date">Enter a Country</label>
+                        <input class="form-control" id="country" type="text" placeholder="us">
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="nm">
                       </li>
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="clear-btn" type="button" class="btn btn-default">Clear Table</button>
                 </form>
               </div>
             </div>
           </aside>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-7">
           <div id="table-area" class="">
             <table id="ufo-table" class="table table-striped">
               <thead>
@@ -61,10 +72,29 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody>
+               
+              </tbody>
             </table>
           </div>
         </div>
+        <div class="col-md-3">
+          <aside class = 'filters'>
+
+            <div class="panel panel-default">
+              <div class="panel-heading" >Search Log</div>
+              <div id = 'report-panel'>
+                <div class = 'panel-body' id = 'sighting-summary'></div>
+              </div>
+              
+              </div>
+            </div>
+            
+          </aside>
+          
+
+        </div>
+        
       </div>
     </div>
     <footer class="footer">
